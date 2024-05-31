@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <style>
+        body {
+            background: linear-gradient( to right, #48D1CC, #40E0D0, #AFEEEE );
+        }
+        div {
+        with: 90%;
+        border: solid 1px gray;
+        border-radius: 10px;
+        padding-left: 20px;
+        margin 0 auto;
+        }
+    </style>
+    <title>Title</title>
+</head>
+<body>
+    <div>
+        <h2>Здравствуйте, {{ username }}! Подборка постов за неделю по вашей подписке!</h2>
+        {% for post in posts %}
+            <p><b>Заголовок:</b> {{ post.title }}</p>
+            <p><b>Краткое содержание:</b>{{ post.text_post|truncatechars:50 }}</p>
+            <h3><a href="{{ link }}{{ post.id }}">Читать в источнике</a></h3>
+            <hr>
+        {% endfor %}
+    </div>
+</body>
+</html>

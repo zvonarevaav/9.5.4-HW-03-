@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <style>
+        body {
+            background: linear-gradient( to right, #48D1CC, #40E0D0, #AFEEEE );
+        }
+    </style>
+    <title>Title</title>
+</head>
+<body>
+    <h2>Здравствуйте, {{ username }}! Новая статья в твоем любимом разделе!</h2>
+    <p><b>Заголовок поста:</b> {{ title }}</p>
+    <p><b>Краткое содержание:</b> {{ text_post }}</p>
+    <h3><a href="{{ link }}">Читать в источнике</a></h3>
+</body>
+</html>
